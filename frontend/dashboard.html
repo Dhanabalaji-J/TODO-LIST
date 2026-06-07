@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1 id="dashboardTitle">
+            Welcome 👋
+        </h1>
+
+        <button id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <i class="fa-solid fa-list-check"></i>
+            <h2 id="totalTasks">0</h2>
+            <p>Total Tasks</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2 id="completedTasks">0</h2>
+            <p>Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-clock"></i>
+            <h2 id="pendingTasks">0</h2>
+            <p>Pending</p>
+        </div>
+
+    </div>
+
+    <!-- Due Today Widget -->
+
+    <div class="today-widget">
+
+        <h3 id="dueTodayCount">
+            📅 Due Today: 0 Tasks
+        </h3>
+
+    </div>
+
+    <!-- Progress Ring -->
+
+   <div class="progress-card">
+
+    <div class="progress-header">
+
+        <h3>
+            📈 Task Progress
+        </h3>
+
+        <span id="progressText">
+            0%
+        </span>
+
+    </div>
+
+    <div class="progress-bar">
+
+        <div
+            class="progress-fill"
+            id="progressFill">
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- Task Input -->
+
+    <div class="task-input">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a new task...">
+
+        <div class="deadline-box">
+
+            <label>
+                Deadline
+            </label>
+
+            <input
+                type="datetime-local"
+                id="deadlineInput">
+
+        </div>
+
+        <button id="addBtn">
+            Add Task
+        </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search your tasks">
+
+    </div>
+
+    <!-- Filters -->
+
+    <div class="filters">
+
+        <button class="filter-btn active">
+            All
+        </button>
+
+        <button class="filter-btn">
+            Completed
+        </button>
+
+        <button class="filter-btn">
+            Pending
+        </button>
+
+    </div>
+
+    <!-- Tasks -->
+
+    <div class="task-section">
+
+        <h2>
+            <i class="fa-solid fa-clipboard-list"></i>
+            My Tasks
+        </h2>
+
+        <div id="taskList">
+
+            <!-- Tasks added dynamically -->
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
